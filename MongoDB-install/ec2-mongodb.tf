@@ -5,7 +5,7 @@ resource "aws_key_pair" "deployer" {
 
 resource "aws_instance" "mongodb" {
   ami           = "ami-013be31976ca2c322"
-  instance_type = "t2.small"
+  instance_type = "t2.micro"
   key_name = "${aws_key_pair.deployer.key_name}"
   vpc_security_group_ids = ["${aws_security_group.vpc-web-sg.id}"]
   subnet_id = "${aws_subnet.my-subnet-pub-1.id}"
