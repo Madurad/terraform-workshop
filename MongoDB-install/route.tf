@@ -17,7 +17,7 @@ resource "aws_route_table_association" "inc-dev-rt-pub-association" {
 }
 
 resource "aws_route_table" "inc-dev-rt-pri" {
-	vpc_id = "${aws_vpc.inc-dev-vpcs.id}"
+	vpc_id = "${aws_vpc.inc-dev-vpc.id}"
 
 	route{
 		cidr_block = "0.0.0.0/0"
