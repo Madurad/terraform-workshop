@@ -28,7 +28,7 @@ resource "aws_security_group" "vpc-dev-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["203.115.28.100/0"]
+    cidr_blocks = ["203.115.28.100/32"]
   }
 
   ingress {
