@@ -1,7 +1,7 @@
 resource "aws_security_group" "vpc-dev-sg" {
   name        = "vpc-dev-sg"
   description = "Allow all inbound traffic"
-  vpc_id      = "${aws_vpc.my-vpc.id}"
+  vpc_id      = "${aws_vpc.inc-dev-vpc.id}"
 
   ingress {
     from_port   = 80

@@ -7,8 +7,8 @@ resource "aws_instance" "mongodb" {
   ami           = "ami-013be31976ca2c322"
   instance_type = "t2.micro"
   key_name = "${aws_key_pair.deployer.key_name}"
-  vpc_security_group_ids = ["${aws_security_group.vpc-web-sg.id}"]
-  subnet_id = "${aws_subnet.my-subnet-pub-1.id}"
+  vpc_security_group_ids = ["${aws_security_group.vpc-dev-sg.id}"]
+  subnet_id = "${aws_subnet.inc-dev-subnet-pub-1.id}"
   associate_public_ip_address = true
   source_dest_check = false
   //depends_on = ["aws_s3_bucket.my-s3-bucket-madura-redis"]
