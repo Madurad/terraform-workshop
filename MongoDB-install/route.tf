@@ -12,12 +12,12 @@ resource "aws_route_table" "inc-dev-rt-pub" {
 }
 
 resource "aws_route_table_association" "inc-dev-rt-pub-association" {
-	subnet_id = "${aws_subnet.inc-subnet-pub-1.id}"
+	subnet_id = "${aws_subnet.inc-dev-subnet-pub-1.id}"
 	route_table_id = "${aws_route_table.my-route-table-pub.id}"
 }
 
 resource "aws_route_table" "inc-dev-rt-pri" {
-	vpc_id = "${aws_vpc.inc-dev-vpc.id}"
+	vpc_id = "${aws_vpc.inc-dev-vpcs.id}"
 
 	route{
 		cidr_block = "0.0.0.0/0"
