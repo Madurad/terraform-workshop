@@ -28,12 +28,17 @@ variable "public_subnet_cidr" {
 	default = "10.102.1.0/24"
 }
 
+variable "public_subnet_cidr_2" {
+	description = "CIDR block for Public Subnet 2"
+	default = "10.102.2.0/24"
+}
+
 variable "private_subnet_cidr" {
 	description = "CIDR block for Private Subnet"
-	default = "10.102.2.0/24"
+	default = "10.102.3.0/24"
 }
 
 variable "private_subnet_cidr_2" {
 	description = "CIDR block for Private Subnet 2"
-	default = "10.102.3.0/24"
+	default = "10.102.4.0/24"
 }

@@ -24,6 +24,16 @@ resource "aws_subnet" "inc-dev-subnet-pub-1" {
   }
 }
 
+resource "aws_subnet" "inc-dev-subnet-pub-2" {
+  vpc_id     = "${aws_vpc.inc-dev-vpc.id}"
+  cidr_block = "${var.public_subnet_cidr_2}"
+  availability_zone = "us-east-1b"
+  tags {
+    Name = "inc-dev-subnet-pub-2"
+  }
+}
+
+
 resource "aws_subnet" "inc-dev-subnet-pri-1" {
   vpc_id     = "${aws_vpc.inc-dev-vpc.id}"
   cidr_block = "${var.private_subnet_cidr}"

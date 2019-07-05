@@ -13,6 +13,7 @@ resource "aws_route_table" "inc-dev-rt-pub" {
 
 resource "aws_route_table_association" "inc-dev-rt-pub-association" {
 	subnet_id = "${aws_subnet.inc-dev-subnet-pub-1.id}"
+	subnet_id = "${aws_subnet.inc-dev-subnet-pub-2.id}"
 	route_table_id = "${aws_route_table.inc-dev-rt-pub.id}"
 }
 
