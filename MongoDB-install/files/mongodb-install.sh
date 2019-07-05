@@ -13,10 +13,10 @@ sudo echo "PATH=$PATH:$HOME/bin:JAVA_HOME:JRE_HOME" >> ~/.bashrc
 sudo source ~/.bashrc
 
 # Installing MongoDB Latest version
-sudo touch etc/yum.repo.d/mongoDB-v3.2.repo
+sudo touch etc/yum.repos.d/mongodb-v3.2.repo
 
 # Get the mongodb yum,repo
-cat <<EOF >/etc/yum.repo.d/mongoDB-v3.2.repo
+cat <<EOF >/etc/yum.repos.d/mongodb-v3.2.repo
 [mongodb-org-3.2]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.2/x86_64/
