@@ -8,12 +8,12 @@ resource "aws_instance" "RMQ-1" {
   source_dest_check = false
   user_data = "${data.template_file.user_data_template.rendered}"
 	tags {
-    	Name = "jenkins-cli"
+    	Name = "Rabbitmq-server"
   }
 }
 
 resource "aws_eip" "rmq-eip" {
-  instance = "${aws_instance.jenkins-cli.id}"
+  instance = "${aws_instance.RMQ-1.id}"
   vpc      = true
   tags {
     	Name = "rmq-eip"
