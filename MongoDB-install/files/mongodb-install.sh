@@ -6,8 +6,8 @@ mkdir sample-directory
 sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 
 # Setup JAVA_HOME Variables
-sudo echo "JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-0.amzn2.x86_64/bin/java"" >> ~/.bashrc
-sudo echo "JRE_HOME="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.201.b09-0.amzn2.x86_64/jre/bin/java"" >> ~/.bashrc
+sudo echo "JAVA_HOME="/usr/java/jdk1.8.0_191-amd64/bin/java"" >> ~/.bashrc
+sudo echo "JRE_HOME="/usr/java/jdk1.8.0_191-amd64/jre/bin/java"" >> ~/.bashrc
 sudo echo "PATH=$PATH:$HOME/bin:JAVA_HOME:JRE_HOME" >> ~/.bashrc
 
 sudo source ~/.bashrc

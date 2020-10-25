@@ -18,8 +18,8 @@ resource "aws_security_group" "vpc-web-sg" {
   }
 
   ingress {
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = 15672
+    to_port     = 15672
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

@@ -12,5 +12,14 @@ sudo echo "PATH=$PATH:$HOME/bin:JAVA_HOME:JRE_HOME" >> ~/.bashrc
 
 sudo source ~/.bashrc
 
-# Installing RabbitMQ v3.8.3
-wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.3/rabbitmq-server-3.8.3-1.el6.noarch.rpm
+# Installing RabbitMQ v3.6.1
+#systemctl start rabbitmq-server.service
+#systemctl enable rabbitmq-server.service
+#rabbitmq-plugins enable rabbitmq_management
+#rabbitmqctl add_user admin mqadminpassword
+#rabbitmqctl set_user_tags admin administrator
+#rabbitmqctl set_permissions -p / mqadmin ".*" ".*" ".*"
+
+
+# Setup cron job
+echo "*/5 * * * * sync; echo 3 > /proc/sys/vm/drop_caches  >/dev/null 2>&1" >> /var/spool/cron/root
