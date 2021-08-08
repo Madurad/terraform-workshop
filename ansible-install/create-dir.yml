@@ -1,0 +1,12 @@
+---
+- name: "Create a directory"
+  hosts: ansible_client
+  tasks:
+  - name: "Instantiate"
+    file:
+      path: ~/foo
+      state: directory
+  - name: "list directory"
+    find:
+      path: ~/
+    register: out 

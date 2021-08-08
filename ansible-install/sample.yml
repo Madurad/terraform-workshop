@@ -1,0 +1,17 @@
+---
+- name: sample-plays
+  hosts: linux
+  become: true
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: latest
+    - name: run httpd
+      service: 
+        name: httpd
+        state: started
+    - name: create content
+      copy:
+        content: "Congrats on Ansible Setup"
+        dest: /var/www/html/index.html
